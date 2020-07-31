@@ -1,5 +1,5 @@
 FROM hamburml/embedded-software-ci:latest
-RUN wget -4 http://project-downloads.drogon.net/wiringpi-latest.deb
+RUN curl -LO http://project-downloads.drogon.net/wiringpi-latest.deb
 RUN /bin/bash -c 'set -ex && \
     ARCH=`uname -m` && \
     if [ "$ARCH" != "x86_64" ]; then \
